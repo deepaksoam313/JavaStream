@@ -16,6 +16,8 @@ public class FP03Reduce {
         //find sum of all odd numbers from the list
         findSumOfOddNumbers(list);
 
+        minimumFromList(list);
+
     }
 
     private static void findSumOfOddNumbers(List<Integer> list) {
@@ -25,6 +27,7 @@ public class FP03Reduce {
     private static void findSquareAndAdd(List<Integer> list) {
         //System.out.println(list.stream().map(number ->number*number).reduce(0,(a,b)-> a+b));
         //Integer :: sum
+        System.out.println(list.stream().reduce(Integer.MAX_VALUE,(a,b)-> a<b?a:b));
         System.out.println(list.stream().map(x->x*x).reduce(0,Integer::sum));
     }
 
@@ -36,7 +39,7 @@ public class FP03Reduce {
     private static int sumOfAllElements(List<Integer> list) {
         int sum  =list.stream().
                 //reduce(0, (a,b) -> a+b);
-                    reduce(0, Integer::sum );
+                    reduce(0, Integer::sum);
         return sum;
         }
     }

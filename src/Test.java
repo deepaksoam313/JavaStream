@@ -1,8 +1,27 @@
 import java.util.*;
 import java.util.stream.Collectors;
+@FunctionalInterface
+interface Solution {
+    int factorial (int a);
+}
+
 
 public class Test {
+
+
     public static void main(String[] args) {
+        //Solution sol = (int val)-> val + 2;
+        Solution sol = (int val)->{
+            int a = val +2;
+            return a;
+
+
+        };
+        System.out.println(sol.factorial(4));
+//        Solution sol = (int val )->{
+//            int i = val * 2;
+//        };
+
 
         List<Character> list = Arrays.asList('a','b','c','a','b','c');
 
@@ -13,7 +32,7 @@ public class Test {
 //            System.out.println(s + ": " + Collections.frequency(list, s));
 //        }
 
-        for (Character c : list){
+        for (Character c : distinct){
             System.out.println(Collections.frequency(list,c));
         }
 

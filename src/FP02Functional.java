@@ -14,7 +14,7 @@ public class FP02Functional {
     private static void printCubeOfNumbers(List<Integer> numbers) {
 
         numbers.stream().
-            filter(number -> number % 2 !=- 0).
+            filter(number -> number % 2 != 0).
                 map(number -> number * number * number).
                         forEach(System.out::println);
     }

@@ -11,9 +11,13 @@ public class Distinct {
 
     private static void printDistinct(List<Integer> list) {
        List<Integer> list2 = new ArrayList<>();
-               list.stream().
-                       distinct().sorted(Comparator.reverseOrder()).
-                            forEach(System.out::println);
+
+       list.stream()
+                       .distinct().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+
+//               list.stream().
+//                       distinct().sorted(Comparator.reverseOrder()).
+//                            forEach(System.out::println);
 
                //Both are the same thing
         //list2 = list.stream().map(n -> n*n).collect(Collectors.toList());
